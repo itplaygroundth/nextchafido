@@ -121,6 +121,7 @@ export function ImageUpload() {
 const classes = useStyle();
 
   const onChange = (
+    //@ts-ignore
     imageList: ImageListType,
     addUpdateIndex: number[] | undefined
   ) => {

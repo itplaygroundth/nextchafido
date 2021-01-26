@@ -1,3 +1,4 @@
+//@ts-nocheck
 import React,{useRef,useState} from "react";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
@@ -54,6 +55,7 @@ function PositioningActionsColumn() {
   const tableRef = useRef();
   const [editable, setEditable] = useState();
   const handleAddRow = () => {
+    
     tableRef.current.state.showAddRow = true;
 
     setEditable({

@@ -99,7 +99,7 @@ const Home = (props:IChannelIndex) => {
 Home.getInitialProps =  async ()=>{
  //const channel = api.get('https://chafido.bondril13.dev/channel')
  //console.log(product)
- console.log(api.defaults.headers)
+ //console.log(api.defaults.headers)
   return {
     channels:api.get('https://chafido.bondril13.dev/channel')
     // channels: [

@@ -17,6 +17,7 @@ export const AuthProvider = (props) => {
     useEffect(()=>{
         async function loadUSerFromCookies() {
             const token = Cookies.get('token')
+            console.log()
             if(token) {
                 console.log("Got a token in the cookies,let's see if it is valid")
                 api.defaults.headers.Authorization = `Bearer ${token.token}`
@@ -33,7 +34,7 @@ export const AuthProvider = (props) => {
         const {data:token} = await api.post('https://chafido.bondril13.dev/auth/login',username)
         if(token){
            // console.log("Got Token")
-          //  console.log(token.token)
+            console.log(token.token)
             Cookies.set('token',token,{expires:60})
             api.defaults.headers.Authorization = `Bearer ${token.token}`
            // const { data:user} = await api.get('user/me')

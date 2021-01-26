@@ -526,7 +526,7 @@ export class FBUser  implements facebook {
   page = new Page()
 }
 
-export class Channel implements channel {
+export class Channel implements IChannel {
   
   channel_id = ''
   channel_name = ''

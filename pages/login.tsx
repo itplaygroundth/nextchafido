@@ -27,8 +27,10 @@ const login = ()=>{
             const udata = new FormData();
             udata.append("username", data.username);
             udata.append("password", data.password);
+            //@ts-ignore
             userContext.login(udata).then(result=>{
               //  console.log(result)
+              //@ts-ignore
                 userContext.isAuthenticated = true
                 router.push('/')
         

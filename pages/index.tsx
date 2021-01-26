@@ -97,16 +97,10 @@ const Home = (props:IChannelIndex) => {
 }
 
 Home.getInitialProps =  async ()=>{
- //const channel = api.get('https://chafido.bondril13.dev/channel')
- //console.log(product)
- //console.log(api.defaults.headers)
+ const channel:any = await api.get('https://chafido.bondril13.dev/channel/')
   return {
-    channels:api.get('https://chafido.bondril13.dev/channel')
-    // channels: [
-    //   {channel_id: '0000',channel_name: 'test',line: 'line_0000',facebook: 'f0000'},
-    //   {channel_id: '0001',channel_name: 'test1',line:'line_0001',facebook: 'f0001'}
+    channels: channel.data.channels
 
-    // ]
   }
 }
 

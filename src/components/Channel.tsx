@@ -84,10 +84,10 @@ const PositioningActionsColumn = (data:any) => {
     //     <img style={{ height: 36, borderRadius: "50%" }} src={rowData.image} />
     //   ),
     // },
-    { title: "id", field: "channel_id" },
-    { title: "ชื่อ", field: "channel_name" },
-    { title: "Line", field: "line" },
-    { title: "Facebook", field: "facebook" },
+    { title: "id", field: "ID" },
+    { title: "ชื่อ", field: "name" },
+    { title: "Line", field: "line_channel.name" },
+    { title: "Facebook", field: "fb_page.name" },
     // {
     //   title: 'Birth Place',
     //   field: 'birthCity',

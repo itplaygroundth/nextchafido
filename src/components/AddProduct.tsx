@@ -21,7 +21,7 @@ import SingleProduct from "./subproduct/SingleProduct";
 import VariantProduct from "./subproduct/VariantProduct";
 import VoucherProuct from "./subproduct/VoucherProuct";
 import ReservedProduct from "./subproduct/ReservedProduct"
-import {withRouter, RouterProps} from 'next/router'
+import {withRouter} from 'next/router'
 
 
 const useStyle = makeStyles((theme: Theme) =>

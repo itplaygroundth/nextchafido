@@ -55,18 +55,22 @@ const useStyle = makeStyles((theme: Theme) =>
 //   },
 // ];
 
-const PositioningActionsColumn = (data:IChannelIndex) => {
+const PositioningActionsColumn = (data:any) => {
   const [datarow, setData] = useState(data.tableData);
   const tableRef = useRef();
   const [editable, setEditable] = useState();
   const handleAddRow = () => {
+    //@ts-ignore
     tableRef.current.state.showAddRow = true;
 
     setEditable({
+       //@ts-ignore
       onRowAdd: newData =>
         new Promise((resolve, reject) => {
           setData([...data, newData]);
+           //@ts-ignore
           setEditable();
+           //@ts-ignore
           resolve();
         })
     });
@@ -104,7 +108,7 @@ const PositioningActionsColumn = (data:IChannelIndex) => {
           new Promise((resolve, reject) => {
             setTimeout(() => {
               setData([...datarow, newData]);
-
+              //@ts-ignore
               resolve();
             }, 1000);
           }),
@@ -112,10 +116,11 @@ const PositioningActionsColumn = (data:IChannelIndex) => {
           new Promise((resolve, reject) => {
             setTimeout(() => {
               const dataUpdate = [...datarow];
+               //@ts-ignore
               const index = oldData.tableData.id;
               dataUpdate[index] = newData;
               setData([...dataUpdate]);
-
+               //@ts-ignore
               resolve();
             }, 1000);
           }),
@@ -123,10 +128,11 @@ const PositioningActionsColumn = (data:IChannelIndex) => {
           new Promise((resolve, reject) => {
             setTimeout(() => {
               const dataDelete = [...datarow];
+               //@ts-ignore
               const index = oldData.tableData.id;
               dataDelete.splice(index, 1);
               setData([...dataDelete]);
-
+               //@ts-ignore
               resolve();
             }, 1000);
           }),

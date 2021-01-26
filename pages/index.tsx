@@ -1,9 +1,9 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.scss'
 import { makeStyles} from '@material-ui/core/styles'
-import {UserContext} from '../src/components/lib/userContext';
+//import {UserContext} from '../src/components/lib/userContext';
 import ListProduct from '../src/components/ListProduct'
-import ListChannel from './../src/components/channel'
+import ListChannel from './../src/components/Channel'
 import { Button } from '@material-ui/core';
 import {IProduct,IChannel} from './../src/types'
 import api from './../src/lib/auth'

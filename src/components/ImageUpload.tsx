@@ -126,7 +126,7 @@ const classes = useStyle();
     addUpdateIndex: number[] | undefined
   ) => {
     // data for submit
-    console.log(imageList, addUpdateIndex);
+    //console.log(imageList, addUpdateIndex);
     setImages(imageList as never[]);
   };
 

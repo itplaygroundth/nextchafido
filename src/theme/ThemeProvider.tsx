@@ -9,7 +9,7 @@ interface ThemeProviderProps {
 
 export const ToggleThemeContext = React.createContext({
   toggleTheme: () => {
-    console.log()
+    //console.log()
   },
   isDark: false,
 })

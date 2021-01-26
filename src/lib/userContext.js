@@ -19,7 +19,7 @@ export const AuthProvider = (props) => {
             const token = Cookies.get('token')
             if(token) {
                 console.log("Got a token in the cookies,let's see if it is valid")
-                api.defaults.headers.Authorization = `Bearer ${token}`
+                api.defaults.headers.Authorization = `Bearer ${token.token}`
                 //const {data:user} = await api.get('users/me')
                 if(user)setUser(user)
                 
@@ -32,13 +32,13 @@ export const AuthProvider = (props) => {
         
         const {data:token} = await api.post('https://chafido.bondril13.dev/auth/login',username)
         if(token){
-            console.log("Got Token")
-           // console.log(token)
+           // console.log("Got Token")
+          //  console.log(token.token)
             Cookies.set('token',token,{expires:60})
             api.defaults.headers.Authorization = `Bearer ${token.token}`
            // const { data:user} = await api.get('user/me')
             setUser(username)
-            console.log("Got User")
+            //console.log("Got User")
         }
          //   console.log("Got Token")
           //  Cookies.set('token','123456789',{expires:60})
@@ -69,7 +69,7 @@ export const useAuth = () => useContext(AuthContext)
 export const ProtectRoute = ({ children }) => {
     const router = useRouter()
     const { isAuthenticated, isLoading } = useAuth();
-    console.log(isLoading,isAuthenticated,router.pathname)
+    //console.log(isLoading,isAuthenticated,router.pathname)
     if (isLoading || (!isAuthenticated && router.pathname !== '/login')){
       return <LoadingScreen />; 
     }

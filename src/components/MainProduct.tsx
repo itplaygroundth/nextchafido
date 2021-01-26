@@ -98,13 +98,13 @@ export default function HorizontalLinearStepper() {
   function getStepContent(step: number) {
     switch (step) {
       case 0:
-        return <AddProduct form={addForm}/>;
+        return <AddProduct frmproduct={addForm}/>;
       case 1:
         return <ChatBot />;
       // case 2:
       //   return 'This is the bit I really care about!';
       default:
-        return <AddProduct form={addForm}/>;
+        return <AddProduct frmproduct={addForm}/>;
     }
   }
 

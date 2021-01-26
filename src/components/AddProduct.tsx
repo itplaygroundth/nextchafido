@@ -58,7 +58,7 @@ function getComponent(step:number) {
   }
   
 
-const ProductForm = ({form:{frmproduct}}) => {
+const ProductForm = (frmproduct:any) => {
   
   const classes = useStyle();
   const [producttype, setType] = React.useState(0);

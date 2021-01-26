@@ -1,29 +1,3 @@
-// import React, { useState, useEffect, useContext, createContext } from 'react';
-// export const authContext = createContext();
-// export function AuthProvider({children}){
-//     const auth = useProvideAuth();
-//     return <authContext.Provider value={auth}>{children}</authContext.Provider>
-// }
-// export const useAuth = () => {
-//     return useContext(authContext)
-// }
-// function useProvideAuth() {
-//     const [user,setUser] = useState(null)
-//     const signIn = () => {
-//         setUser(true)
-//     }
-//     const signOut = () =>{
-//         setUser(false)
-//     }
-//     useEffect(()=>{
-
-//     })
-//     return  {
-//         user,
-//         signIn,
-//         signOut
-//     }
-// }
 
 import Axios from 'axios';
 let urls = {

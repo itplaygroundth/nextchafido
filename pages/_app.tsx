@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { AppProps } from 'next/app'
 import TopBar from '../src/components/TopBar'
 //import { Footer } from '../src/components/Footer'
-import styles from '../styles/App.modules.scss'
+//import styles from '../styles/App.modules.scss'
 import {AuthProvider,ProtectRoute} from './../src/lib/userContext'
 
 const MyApp = ({ Component, pageProps }: AppProps): React.ReactNode => {
